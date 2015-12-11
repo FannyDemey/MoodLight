@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <!-- Angular Material style sheet -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>PLAYBULB Candle Demo</title>
+  <link rel="icon" sizes="192x192" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
+
+<body class="body" id="state">
+   <div id="step1">
+      <div id="title">Mood Light</div>
+      <a id="connect" class="waves-effect waves-light btn"><i class="material-icons right">bluetooth</i>Connect</a>
+      
+      <div id="loader" style="display: none;">
+        <div class="preloader-wrapper small active">
+          <div class="spinner-layer">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="errorLabel"></div>
+    </div>
+   
+    <div id="step2">
+      <div id="deviceName"></div>
+      <div id="batteryLevel"></div>
+      <div ><h5>How do you feel ?</h5></div>
+      <div id="moodList" class="collection">
+        <a href="#!" id="perfect" class="collection-item waves-effect waves-light"><i class="material-icons">music_note</i><span>Coding is wonderful !</span></a>        
+        <a href="#!" id="ok" class="collection-item waves-effect waves-green"><i class="material-icons">mood</i>Everything is OK</a>
+        <a href="#!" id="notok" class="collection-item waves-effect"><i class="material-icons">mood_bad</i>I want my Mummy...</a>
+        <a href="#!" id="trouble" class="collection-item waves-effect waves-orange"><i class="material-icons">warning</i>Hum ... What this shit ?!</a>
+        <a href="#!" id="problem" class="collection-item waves-effect waves-red"><i class="material-icons">error</i>OK ! I have a big problem</a>
+      </div>
+    </div>
+
+
+  <script src="home.js"></script>
+  <script src="PlayBulbAPI/playbulbCandle.js"></script>
+
+
+</body>
+</html>
